@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindfulU — A Private Space to Navigate Student Life</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Caveat:wght@700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/css/styles.css"/>
+<style type="text/tailwindcss">
+        :root {
+            --brand-purple: #8B5CF6;
+            --brand-yellow: #FBBF24;
+            --brand-pink: #EC4899;
+            --brand-teal: #14B8A6;
+            --bg-cream: #FFFBEB;
+            --text-dark: #1F2937;
+            --text-medium: #6B7280;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-cream);
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-caveat {
+            font-family: 'Caveat', cursive;
+        }
+        .accent-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .accent-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            height: 10px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        .squiggle-underline::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='12' viewBox='0 0 100 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 6.5C10.6667 3.16667 29.5 -1 50 6.5C70.5 14 89.3333 9.83333 98.5 6.5' stroke='%23FBBF24' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+            bottom: -8px;
+        }
+        .brush-underline::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='12' viewBox='0 0 100 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6C20.6667 9.83333 50.5 9.16667 98 2' stroke='%23EC4899' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+            bottom: -5px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body class="bg-[var(--bg-cream)]">
+<div class="relative min-h-screen w-full overflow-x-hidden">
+<div class="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+<header class="flex items-center justify-between py-6">
+<div class="flex items-center gap-2">
+<div class="size-9 bg-[var(--brand-purple)] rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h2 class="font-extrabold text-2xl tracking-tight text-[var(--text-dark)]">MindfulU</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-[var(--text-medium)] hover:text-[var(--text-dark)] transition-colors" href="student_dashboard.html">For Students</a>
+<a class="text-sm font-medium text-[var(--text-medium)] hover:text-[var(--text-dark)] transition-colors" href="#">For Universities</a>
+<a class="text-sm font-medium text-[var(--text-medium)] hover:text-[var(--text-dark)] transition-colors" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline text-sm font-medium text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="student_dashboard.html">Sign In</a>
+<button id="btnHeaderAccess" class="px-5 py-2.5 rounded-full text-sm font-bold bg-[var(--brand-purple)] text-white shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">Get Early Access</button>
+</div>
+</header>
+<main class="relative mt-8">
+<section class="relative text-center pt-8 pb-16">
+<div class="absolute top-0 left-0 -mt-8 ml-0 hidden lg:block transform -rotate-12">
+<div class="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-full shadow-lg">
+<span class="text-3xl">🤫</span>
+<p class="font-semibold text-sm text-[var(--text-dark)]">100% Confidential</p>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 mb-8 mr-0 hidden lg:block transform rotate-12">
+<div class="flex items-center gap-3 bg-white/60 backdrop-blur-sm p-3 rounded-full shadow-lg">
+<span class="text-3xl">🤗</span>
+<p class="font-semibold text-sm text-[var(--text-dark)]">Non-judgmental</p>
+</div>
+</div>
+<h1 class="font-extrabold text-4xl sm:text-5xl lg:text-7xl leading-tight tracking-tighter text-[var(--text-dark)]">
+                        A <span class="text-[var(--brand-purple)]">Private Space</span> for your<br class="hidden sm:block"/>
+<span class="accent-underline brush-underline text-[var(--brand-pink)]">Well-being</span>
+</h1>
+<p class="mt-8 max-w-3xl mx-auto text-[var(--text-medium)] leading-relaxed">
+                        Navigating higher education in India can be tough. MindfulU provides a secure and anonymous platform for students to manage stress, access resources, and connect with support, prioritizing your mental health journey.
+                    </p>
+<div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+<button id="btnHeroRequest" class="px-8 py-3.5 rounded-full text-base font-bold bg-[var(--brand-purple)] text-white shadow-lg hover:shadow-xl transition-shadow w-full sm:w-auto">Request Access</button>
+<button id="btnHeroLearn" class="px-8 py-3.5 rounded-full text-base font-bold bg-white text-[var(--text-dark)] shadow-md hover:bg-gray-50 transition-colors w-full sm:w-auto">Learn More</button>
+</div>
+</section>
+<section class="py-16">
+<div class="text-center">
+<h2 class="font-extrabold text-3xl sm:text-4xl text-[var(--text-dark)]">Your Personal Toolkit for Well-being</h2>
+<p class="font-caveat text-4xl sm:text-5xl text-[var(--brand-yellow)] accent-underline squiggle-underline -mt-2">Always Here for You</p>
+</div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-3xl p-6 text-center shadow-sm border border-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all">
+<div class="mx-auto bg-[var(--brand-teal)]/10 text-[var(--brand-teal)] size-16 rounded-2xl flex items-center justify-center"><span class="text-4xl">🤫</span></div>
+<h3 class="font-bold text-xl text-[var(--text-dark)] mt-5">Confidential Check-ups</h3>
+<p class="mt-2 text-sm text-[var(--text-medium)]">Regularly assess your mental state with our private, guided check-in tools.</p>
+</div>
+<div class="bg-white rounded-3xl p-6 text-center shadow-sm border border-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all">
+<div class="mx-auto bg-[var(--brand-purple)]/10 text-[var(--brand-purple)] size-16 rounded-2xl flex items-center justify-center"><span class="text-4xl">🤖</span></div>
+<h3 class="font-bold text-xl text-[var(--text-dark)] mt-5">24/7 AI Guide</h3>
+<p class="mt-2 text-sm text-[var(--text-medium)]">Get instant, supportive guidance from our AI companion, anytime you need to talk.</p>
+</div>
+<div class="bg-white rounded-3xl p-6 text-center shadow-sm border border-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all">
+<div class="mx-auto bg-[var(--brand-pink)]/10 text-[var(--brand-pink)] size-16 rounded-2xl flex items-center justify-center"><span class="text-4xl">🧘‍♀️</span></div>
+<h3 class="font-bold text-xl text-[var(--text-dark)] mt-5">Interactive Activities</h3>
+<p class="mt-2 text-sm text-[var(--text-medium)]">Engage with mindfulness exercises, journaling prompts, and mood-boosting activities.</p>
+</div>
+<div class="bg-white rounded-3xl p-6 text-center shadow-sm border border-gray-200/50 hover:shadow-xl hover:-translate-y-1 transition-all">
+<div class="mx-auto bg-[var(--brand-yellow)]/10 text-[var(--brand-yellow)] size-16 rounded-2xl flex items-center justify-center"><span class="text-4xl">🔗</span></div>
+<h3 class="font-bold text-xl text-[var(--text-dark)] mt-5">Seamlessly Connect</h3>
+<p class="mt-2 text-sm text-[var(--text-medium)]">Optionally connect with university counselors or peer support networks, securely.</p>
+</div>
+</div>
+</section>
+<section class="bg-white my-16 rounded-3xl p-8 sm:p-12">
+<div class="text-center">
+<h2 class="font-extrabold text-3xl sm:text-4xl text-[var(--text-dark)]">Your Privacy is Our Priority</h2>
+<p class="font-caveat text-4xl sm:text-5xl text-[var(--brand-teal)] accent-underline squiggle-underline -mt-2">Built on Trust</p>
+</div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 size-12 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center text-2xl">🖥️</div>
+<div>
+<h4 class="font-bold text-md text-[var(--text-dark)]">Self-Hosted AI</h4>
+<p class="text-sm text-[var(--text-medium)]">Our AI models run on our own servers to ensure data privacy.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 size-12 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center text-2xl">🔒</div>
+<div>
+<h4 class="font-bold text-md text-[var(--text-dark)]">End-to-End Encryption</h4>
+<p class="text-sm text-[var(--text-medium)]">Your conversations and data are encrypted from start to finish.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 size-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center text-2xl">📊</div>
+<div>
+<h4 class="font-bold text-md text-[var(--text-dark)]">Anonymized Analytics</h4>
+<p class="text-sm text-[var(--text-medium)]">We only use aggregated, non-identifiable data for insights.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0 size-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-2xl">✅</div>
+<div>
+<h4 class="font-bold text-md text-[var(--text-dark)]">You Control Your Data</h4>
+<p class="text-sm text-[var(--text-medium)]">Clear, simple controls to manage and delete your information.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-extrabold text-3xl sm:text-4xl text-[var(--text-dark)]">For Universities</h2>
+<p class="font-caveat text-4xl sm:text-5xl text-[var(--brand-purple)] accent-underline squiggle-underline -mt-2">Empowering Student Success</p>
+<p class="mt-6 text-[var(--text-medium)]">Provide your students with a powerful mental wellness tool while gaining privacy-preserving insights to improve campus-wide well-being initiatives.</p>
+<div class="mt-8 flex justify-start">
+<button id="btnDemo" class="px-6 py-3 rounded-full text-base font-bold bg-[var(--brand-teal)] text-white shadow-lg hover:bg-teal-700 transition-all duration-300 transform hover:scale-105">Request a Demo</button>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200/50 flex items-start gap-4">
+<div class="flex-shrink-0 size-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl">📈</div>
+<div>
+<h4 class="font-bold text-[var(--text-dark)]">Trend Dashboards</h4>
+<p class="text-sm text-[var(--text-medium)]">Understand student population stress levels and common concerns through anonymized, aggregated data.</p>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200/50 flex items-start gap-4">
+<div class="flex-shrink-0 size-10 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center text-xl">🛠️</div>
+<div>
+<h4 class="font-bold text-[var(--text-dark)]">Resource Planning</h4>
+<p class="text-sm text-[var(--text-medium)]">Identify needs for specific support services (e.g., academic stress, anxiety) and allocate resources effectively.</p>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200/50 flex items-start gap-4">
+<div class="flex-shrink-0 size-10 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center text-xl">🛡️</div>
+<div>
+<h4 class="font-bold text-[var(--text-dark)]">Privacy by Design</h4>
+<p class="text-sm text-[var(--text-medium)]">Our platform is built to protect student anonymity while providing valuable, actionable insights for your institution.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-gradient-to-r from-purple-600 to-pink-500 my-16 rounded-3xl text-center text-white py-16 px-8">
+<h2 class="font-extrabold text-3xl sm:text-4xl">Ready to prioritize your well-being?</h2>
+<p class="mt-4 max-w-2xl mx-auto text-white/80 leading-relaxed">
+                        Join the waitlist to be among the first to experience a new standard in student mental health support.
+                    </p>
+<div class="mt-8 flex justify-center">
+<button id="btnCtaAccess" class="px-8 py-4 rounded-full text-base font-bold bg-white text-[var(--brand-purple)] shadow-lg hover:bg-gray-100 transition-colors transform hover:scale-105 duration-300">Get Early Access</button>
+</div>
+</section>
+</main>
+<footer class="mt-16 py-12 border-t border-gray-200">
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8">
+<div class="col-span-1 md:col-span-4 lg:col-span-2">
+<div class="flex items-center gap-2">
+<div class="size-9 bg-[var(--brand-purple)] rounded-lg flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h2 class="font-extrabold text-2xl tracking-tight text-[var(--text-dark)]">MindfulU</h2>
+</div>
+<p class="mt-4 text-sm text-[var(--text-medium)]">A private space for students to navigate life's challenges.</p>
+</div>
+<div>
+<h4 class="font-bold text-sm text-[var(--text-dark)]">Product</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="student_dashboard.html">For Students</a></li>
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">For Universities</a></li>
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">Pricing</a></li>
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">Security</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm text-[var(--text-dark)]">Company</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">About Us</a></li>
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">Careers</a></li>
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">Blog</a></li>
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm text-[var(--text-dark)]">Legal</h4>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-[var(--text-medium)] hover:text-[var(--text-dark)]" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between">
+<p class="text-sm text-[var(--text-medium)]">© 2024 MindfulU. All rights reserved.</p>
+<div class="flex items-center gap-4 mt-4 sm:mt-0">
+<a class="text-gray-400 hover:text-gray-500" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-gray-500" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.284 3.023 7.915 7.135 9.167.245.045.334-.106.334-.235 0-.116-.004-1.127-.004-1.127s-1.007.25-1.22-.507c-.126-.327-.582-.653-.787-.798-.158-.11-.383-.306-.013-.3.35-.007.6.35.6.35.39.67.945.954 1.54.73.04-.568.19-.954.34-1.173-1.174-.133-2.41-.587-2.41-2.61 0-.576.207-1.047.547-1.415-.054-.133-.238-.67.05-1.395 0 0 .444-.142 1.45.54a4.912 4.912 0 012.652 0c1.007-.682 1.45-.54 1.45-.54.288.725.104 1.262.05 1.395.34.368.546.84.546 1.415 0 2.03-1.238 2.475-2.415 2.607.2.172.378.514.378 1.036 0 .75-.007 1.353-.007 1.536 0 .13.088.283.338.235C18.979 19.915 22 16.284 22 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-gray-500" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.834 9.166l-4.5 2.25a.75.75 0 01-1.084-.666V9.25a.75.75 0 011.084-.666l4.5 2.25a.75.75 0 010 1.332z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+<script src="../assets/js/app.js"></script>
+<script>
+  const goToAssessment = () => window.location.href = 'assessment_flow.html';
+  const goToDashboard = () => window.location.href = 'student_dashboard.html';
+  document.getElementById('btnHeaderAccess')?.addEventListener('click', goToAssessment);
+  document.getElementById('btnHeroRequest')?.addEventListener('click', goToAssessment);
+  document.getElementById('btnCtaAccess')?.addEventListener('click', goToAssessment);
+</script>
+</body></html>
+

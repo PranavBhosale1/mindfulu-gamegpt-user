@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MindfulU - Assessment Results</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Caveat:wght@700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/css/styles.css"/>
+</head>
+<body class="bg-[var(--cream)]">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap px-10 py-4 bg-white shadow-sm">
+<div class="flex items-center gap-2 text-2xl font-bold text-purple-700">
+<span class="material-symbols-outlined text-4xl text-[var(--purple)]">self_improvement</span>
+<h1 class="font-bold text-2xl" style="font-family: 'Poppins', sans-serif;">MindfulU</h1>
+</div>
+<nav class="flex items-center gap-8 text-gray-600">
+<a class="text-base font-medium hover:text-[var(--purple)] transition-colors" href="wonderkids.html">Home</a>
+<a class="text-base font-medium hover:text-[var(--purple)] transition-colors" href="student_dashboard.html">Dashboard</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="relative rounded-full p-2 hover:bg-gray-100 transition-colors">
+<span class="material-symbols-outlined text-gray-600">notifications</span>
+<span class="absolute top-1 right-1 block h-2 w-2 rounded-full bg-[var(--pink)]"></span>
+</button>
+<img alt="User avatar" class="size-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXhT5sSbW4oyOz8mLOJKEcbAKnXYQ1XNNU6MC6bCfo7vH1nl5eagB7P0WwVxa-T9KoWnbvp_JmTYEaZ7YfZCytmsVwfH73ov3Tv52u10iGTJcKApHqQpO4xdRcnaXvjQVaY1SImNqQPRVQycmhozG_X8ZbXw3ruNMn0HIVlGk7desqfsPIUJCn3djAazQGqFdasWqCpwCIDqDcXXVAtY3C_jRBfraXriC3-p-448EAw1eQIH8RErR9BY5BqG0V8kmSMoJ5KjxKHFM"/>
+</div>
+</header>
+<main class="flex-1 px-4 py-12 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Your Stress Assessment Results</h2>
+<div class="result-card mb-12">
+<p id="summary" class="text-2xl font-semibold text-gray-800">Your score suggests you may be experiencing <span class="font-caveat text-3xl text-[var(--purple)]">mild stress</span></p>
+</div>
+<div class="mb-12">
+<div class="flex justify-between items-center mb-2">
+<span class="text-lg font-medium text-gray-600">Your Stress Level</span>
+<span id="scoreText" class="text-lg font-bold text-[var(--purple)]">0%</span>
+</div>
+<div class="score"><div id="scoreFill"></div></div>
+<p class="text-sm text-gray-500 mt-3 text-center">This indicates that you're managing well, but there might be areas where you could benefit from additional support. Remember, it's okay to seek help and explore strategies to enhance your well-being.</p>
+</div>
+<h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Clear, Actionable Next Steps</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+<div class="p-6 flex flex-col items-center text-center">
+<div class="p-4 rounded-full bg-[var(--teal)] mb-4">
+<span class="material-symbols-outlined text-4xl text-white">spa</span>
+</div>
+<h4 class="text-xl font-bold text-gray-800 mb-2">Explore Relaxation Techniques</h4>
+<p class="text-gray-600 mb-4">Discover simple exercises to help you relax and manage stress.</p>
+<a class="mt-auto inline-block bg-[var(--teal)] text-white font-semibold py-2 px-6 rounded-full group-hover:bg-opacity-90 transition-colors" href="#">Learn More</a>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+<div class="p-6 flex flex-col items-center text-center">
+<div class="p-4 rounded-full bg-[var(--yellow)] mb-4">
+<span class="material-symbols-outlined text-4xl text-white">groups</span>
+</div>
+<h4 class="text-xl font-bold text-gray-800 mb-2">Connect with a Counselor</h4>
+<p class="text-gray-600 mb-4">Schedule a confidential session to explore personalized support.</p>
+<a class="mt-auto inline-block bg-[var(--yellow)] text-white font-semibold py-2 px-6 rounded-full group-hover:bg-opacity-90 transition-colors" href="#">Book a Session</a>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
+<div class="p-6 flex flex-col items-center text-center">
+<div class="p-4 rounded-full bg-[var(--pink)] mb-4">
+<span class="material-symbols-outlined text-4xl text-white">auto_stories</span>
+</div>
+<h4 class="text-xl font-bold text-gray-800 mb-2">Access Self-Help Resources</h4>
+<p class="text-gray-600 mb-4">Browse our curated collection of articles, videos, and tools.</p>
+<a class="mt-auto inline-block bg-[var(--pink)] text-white font-semibold py-2 px-6 rounded-full group-hover:bg-opacity-90 transition-colors" href="#">View Resources</a>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<p class="text-gray-500 text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">lock</span>
+                Your report is private and will not be shared with anyone at the university. You are in full control.
+            </p>
+</div>
+</div>
+</main>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const score = Math.max(0, Math.min(100, parseInt(params.get('score') || '0', 10)));
+  const fill = document.getElementById('scoreFill');
+  const scoreText = document.getElementById('scoreText');
+  const summary = document.getElementById('summary');
+  const label = score < 34 ? 'low stress' : score < 67 ? 'mild stress' : 'elevated stress';
+  summary.innerHTML = `Your score suggests you may be experiencing <span class="font-caveat text-3xl text-[var(--purple)]">${label}</span>`;
+  scoreText.textContent = `${score}%`;
+  requestAnimationFrame(() => { fill.style.width = `${score}%`; });
+</script>
+</body></html>
+

@@ -1,0 +1,27 @@
+:root {
+  --brand-purple: #8B5CF6;
+  --brand-yellow: #FBBF24;
+  --brand-pink: #EC4899;
+  --brand-teal: #14B8A6;
+  --bg-cream: #FFFBEB;
+  --text-dark: #1F2937;
+  --text-medium: #6B7280;
+}
+
+body { font-family: 'Inter', sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+.font-caveat { font-family: 'Caveat', cursive; }
+
+.btn { transition: all .2s ease; }
+.btn:hover { transform: translateY(-1px); }
+
+.card { transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 20px 30px -15px rgba(0,0,0,.15); }
+
+.progress { height: 10px; background: #e5e7eb; border-radius: 9999px; overflow: hidden; }
+.progress > div { height: 100%; background: var(--brand-teal); width: 0; transition: width .3s ease; }
+
+.score { height: 16px; background: #e5e7eb; border-radius: 9999px; overflow: hidden; }
+.score > div { height: 100%; background: linear-gradient(90deg, var(--brand-yellow), var(--brand-pink)); width: 0; transition: width .5s ease; }
+
+.active-link { color: var(--brand-purple) !important; font-weight: 600; }
