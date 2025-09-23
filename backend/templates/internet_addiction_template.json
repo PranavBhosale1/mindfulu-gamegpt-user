@@ -1,0 +1,133 @@
+{
+  "assessmentId": "internet_addiction_template",
+  "assessmentName": "Internet & Social Media Usage Check-in",
+  "version": 1.1,
+  "instructions": "After reading each statement carefully, please select the response which best describes your feelings and actions.",
+  "timeframe_instruction": "During the past month, how often do you...",
+  "questions": [
+    {
+      "questionId": "q1",
+      "text_template": "Find that you stay online longer than you intended (for example, {{example}})?",
+      "ai_context_guide": { "theme": "Loss of Control", "examples": "scrolling reels instead of studying, watching one more video after work" }
+    },
+    {
+      "questionId": "q2",
+      "text_template": "Neglect household chores or personal tasks to spend more time online (like {{example}})?",
+      "ai_context_guide": { "theme": "Neglect of Responsibilities", "examples": "putting off laundry to browse social media, skipping meals while gaming" }
+    },
+    { 
+      "questionId": "q3", 
+      "text_template": "Prefer the excitement of the internet over spending time with people in person (like {{example}})?",
+      "ai_context_guide": { "theme": "Social Isolation", "examples": "choosing to chat online rather than meet friends, staying home to browse instead of going out" }
+    },
+    { 
+      "questionId": "q4", 
+      "text_template": "Form new friendships or relationships with people you meet online?",
+      "ai_context_guide": { "theme": "Online Relationships", "examples": "connecting with gaming buddies, making friends through social platforms" }
+    },
+    { 
+      "questionId": "q5", 
+      "text_template": "Find that others in your life complain about the amount of time you spend online?",
+      "ai_context_guide": { "theme": "External Concerns", "examples": "parents commenting on phone usage, friends saying you're always distracted" }
+    },
+    {
+      "questionId": "q6",
+      "text_template": "Find that your grades or school work suffer because of the time you spend online (for example, {{example}})?",
+      "ai_context_guide": { "theme": "Negative Consequences", "examples": "missing assignment deadlines due to distractions, falling behind on projects" }
+    },
+    { 
+      "questionId": "q7", 
+      "text_template": "Check your phone or notifications before something else you need to do (like {{example}})?",
+      "ai_context_guide": { "theme": "Compulsive Checking", "examples": "checking Instagram before studying, scrolling before getting out of bed" }
+    },
+    { 
+      "questionId": "q8", 
+      "text_template": "Find that your job performance or productivity suffers because of your internet use?",
+      "ai_context_guide": { "theme": "Work Impact", "examples": "browsing social media during work hours, missing deadlines due to online distractions" }
+    },
+    { 
+      "questionId": "q9", 
+      "text_template": "Become defensive or secretive when anyone asks you what you do online?",
+      "ai_context_guide": { "theme": "Defensive Behavior", "examples": "hiding your screen when someone approaches, lying about time spent online" }
+    },
+    { 
+      "questionId": "q10", 
+      "text_template": "Block out disturbing thoughts about your life with soothing online activities (like {{example}})?",
+      "ai_context_guide": { "theme": "Emotional Escape", "examples": "watching videos to avoid stress, scrolling to forget problems" }
+    },
+    { 
+      "questionId": "q11", 
+      "text_template": "Find yourself anticipating when you will go online again?",
+      "ai_context_guide": { "theme": "Anticipation", "examples": "counting hours until you can check social media, planning your next gaming session" }
+    },
+    { 
+      "questionId": "q12", 
+      "text_template": "Fear that life without the internet would be boring, empty, and joyless?",
+      "ai_context_guide": { "theme": "Dependency Fear", "examples": "feeling anxious without WiFi, worrying about missing online content" }
+    },
+    { 
+      "questionId": "q13", 
+      "text_template": "Snap, yell, or act annoyed if someone bothers you while you are online?",
+      "ai_context_guide": { "theme": "Irritability", "examples": "getting angry when interrupted while browsing, snapping at family during screen time" }
+    },
+    { 
+      "questionId": "q14", 
+      "text_template": "Lose sleep because of being online late at night (for example, {{example}})?",
+      "ai_context_guide": { "theme": "Sleep Impact", "examples": "staying up scrolling through feeds, losing track of time while watching videos" }
+    },
+    { 
+      "questionId": "q15", 
+      "text_template": "Feel preoccupied with the internet when offline, or fantasize about being online?",
+      "ai_context_guide": { "theme": "Mental Preoccupation", "examples": "thinking about posts while in class, daydreaming about online activities" }
+    },
+    { 
+      "questionId": "q16", 
+      "text_template": "Find yourself saying 'just a few more minutes' when you are online?",
+      "ai_context_guide": { "theme": "Time Bargaining", "examples": "telling yourself one more video, promising to close the app soon" }
+    },
+    { 
+      "questionId": "q17", 
+      "text_template": "Try to cut down the amount of time you spend online and fail?",
+      "ai_context_guide": { "theme": "Failed Control Attempts", "examples": "setting app limits but overriding them, deleting apps only to reinstall them" }
+    },
+    { 
+      "questionId": "q18", 
+      "text_template": "Try to hide how long you've actually been online?",
+      "ai_context_guide": { "theme": "Concealment", "examples": "clearing browser history, lying about screen time to others" }
+    },
+    { 
+      "questionId": "q19", 
+      "text_template": "Choose to spend more time online over going out with others?",
+      "ai_context_guide": { "theme": "Social Preference", "examples": "declining plans to stay home browsing, choosing online gaming over meeting friends" }
+    },
+    { 
+      "questionId": "q20", 
+      "text_template": "Feel depressed, moody, or nervous when you are offline, which goes away once you are back online?",
+      "ai_context_guide": { "theme": "Withdrawal Symptoms", "examples": "feeling anxious without internet access, mood improving after going online" }
+    }
+  ],
+  "answerOptions": [
+    { "text": "Not Applicable", "value": 0 },
+    { "text": "Rarely", "value": 1 },
+    { "text": "Occasionally", "value": 2 },
+    { "text": "Frequently", "value": 3 },
+    { "text": "Often", "value": 4 },
+    { "text": "Always", "value": 5 }
+  ],
+  "scoring_bands": [
+    { "min": 0, "max": 30, "interpretation": "Normal level of internet usage", "severity": "Normal" },
+    { "min": 31, "max": 49, "interpretation": "Mild level of internet addiction", "severity": "Mild" },
+    { "min": 50, "max": 79, "interpretation": "Moderate level of internet addiction", "severity": "Moderate" },
+    { "min": 80, "max": 100, "interpretation": "Severe dependence upon the internet", "severity": "Severe" }
+  ],
+  "recommendation_templates": {
+    "Normal": { "default": [ "Your responses suggest a healthy relationship with the internet." ] },
+    "Mild": { "default": [ "Your usage patterns indicate some mild issues with managing your time online. Consider setting specific time limits for social media or gaming." ] },
+    "Moderate": {
+      "Teenager (School-going)": [ "Your responses suggest that your internet use is moderately impacting your life. It is a good idea to talk to a school counsellor about this.", "Try turning off non-essential notifications on your phone to reduce distractions." ],
+      "Young Adult (College-going)": [ "Your internet use seems to be causing moderate issues. Your college likely has resources to help with time management and digital habits." ],
+      "Young Professional": [ "Your responses indicate a moderate level of problematic internet use. Speaking with a therapist can provide you with effective strategies to regain control." ]
+    },
+    "Severe": { "default": [ "Your score indicates a severe dependence on the internet. It is strongly recommended that you seek professional help from a therapist or counsellor specializing in addiction." ] }
+  }
+}

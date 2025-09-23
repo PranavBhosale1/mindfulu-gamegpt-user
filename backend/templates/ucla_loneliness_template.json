@@ -1,0 +1,49 @@
+{
+  "assessmentId": "ucla_loneliness_v3",
+  "assessmentName": "Loneliness Check-in (UCLA Scale V3)",
+  "version": 1.0,
+  "instructions": "The following statements describe how people sometimes feel. For each statement, please indicate how often you feel the way described.",
+  "timeframe_instruction": "How often do you feel...",
+  "questions": [
+    { "questionId": "q1", "text_template": "That you are 'in tune' with the people around you (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Social Connection", "examples": "understanding your friends' feelings, being on the same wavelength as your classmates" } },
+    { "questionId": "q2", "text_template": "That you lack companionship (for example, {{example}})?" , "ai_context_guide": { "theme": "Missing Connection", "examples": "having no one to hang out with, eating alone in the cafeteria" } },
+    { "questionId": "q3", "text_template": "That there is no one you can turn to (for example, {{example}})?" , "ai_context_guide": { "theme": "Support System", "examples": "having no one to call when upset, facing problems completely alone" } },
+    { "questionId": "q4", "text_template": "Alone (for example, {{example}})?" , "ai_context_guide": { "theme": "Isolation", "examples": "spending weekends by yourself, sitting alone during break time" } },
+    { "questionId": "q5", "text_template": "Part of a group of friends (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Group Belonging", "examples": "having a close-knit friend circle, being included in group chats" } },
+    { "questionId": "q6", "text_template": "That you have a lot in common with the people around you (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Shared Interests", "examples": "having similar hobbies with friends, sharing the same music taste" } },
+    { "questionId": "q7", "text_template": "That you are no longer close to anyone (for example, {{example}})?" , "ai_context_guide": { "theme": "Lost Connections", "examples": "drifting away from old friends, feeling distant from family" } },
+    { "questionId": "q8", "text_template": "That your interests and ideas are not shared by those around you (for example, {{example}})?" , "ai_context_guide": { "theme": "Being Different", "examples": "feeling misunderstood by peers, having unique passions no one relates to" } },
+    { "questionId": "q9", "text_template": "Outgoing and friendly (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Social Confidence", "examples": "easily starting conversations, being comfortable meeting new people" } },
+    { "questionId": "q10", "text_template": "Close to people (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Intimate Bonds", "examples": "having deep conversations with friends, feeling emotionally connected" } },
+    { "questionId": "q11", "text_template": "Left out (for example, {{example}})?" , "ai_context_guide": { "theme": "Exclusion", "examples": "not being invited to parties, watching others make plans without you" } },
+    { "questionId": "q12", "text_template": "That your relationships with others are not meaningful (for example, {{example}})?" , "ai_context_guide": { "theme": "Shallow Connections", "examples": "only having surface-level conversations, feeling like friendships lack depth" } },
+    { "questionId": "q13", "text_template": "That no one really knows you well (for example, {{example}})?" , "ai_context_guide": { "theme": "Being Unknown", "examples": "keeping your true feelings hidden, feeling like an outsider even in groups" } },
+    { "questionId": "q14", "text_template": "Isolated from others (for example, {{example}})?" , "ai_context_guide": { "theme": "Physical/Social Isolation", "examples": "spending days without meaningful interaction, feeling cut off from social circles" } },
+    { "questionId": "q15", "text_template": "That you can find companionship when you want it (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Available Support", "examples": "knowing you have friends to call, having people to spend time with when needed" } },
+    { "questionId": "q16", "text_template": "That there are people who really understand you (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Being Understood", "examples": "having friends who get your humor, feeling heard when you share problems" } },
+    { "questionId": "q17", "text_template": "Shy (for example, {{example}})?" , "ai_context_guide": { "theme": "Social Anxiety", "examples": "feeling nervous in group conversations, avoiding speaking up in class" } },
+    { "questionId": "q18", "text_template": "That people are around you but not with you (for example, {{example}})?" , "ai_context_guide": { "theme": "Surrounded but Alone", "examples": "feeling lonely in a crowd, being physically present but emotionally distant" } },
+    { "questionId": "q19", "text_template": "That there are people you can talk to (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Communication Support", "examples": "having someone to vent to, knowing friends will listen to your problems" } },
+    { "questionId": "q20", "text_template": "That there are people you can turn to (for example, {{example}})?" , "is_reverse_scored": true, "ai_context_guide": { "theme": "Reliable Support", "examples": "having friends who help in tough times, knowing family is there when needed" } }
+  ],
+  "answerOptions": [
+    { "text": "Never", "value": 1 },
+    { "text": "Rarely", "value": 2 },
+    { "text": "Sometimes", "value": 3 },
+    { "text": "Always", "value": 4 }
+  ],
+  "scoring_bands": [
+    { "min": 20, "max": 40, "interpretation": "Low level of loneliness", "severity": "Low" },
+    { "min": 41, "max": 60, "interpretation": "Moderate level of loneliness", "severity": "Moderate" },
+    { "min": 61, "max": 80, "interpretation": "High level of loneliness", "severity": "High" }
+  ],
+  "recommendation_templates": {
+    "Low": { "default": [ "Your responses suggest you generally feel a good sense of connection with others." ] },
+    "Moderate": {
+      "Teenager (School-going)": [ "It seems you sometimes feel lonely. This is common. Trying to join a new school club could help you meet people with similar interests." ],
+      "Young Adult (College-going)": [ "Your responses suggest a moderate level of loneliness. College can feel isolating. Consider joining campus groups or forming a study group." ],
+      "Young Professional": [ "Your responses suggest a moderate level of loneliness. Building a social circle in a new city can be challenging. Look for social clubs or networking events outside of work." ]
+    },
+    "High": { "default": [ "Your responses suggest a high level of loneliness. It is highly recommended that you speak with a counsellor or therapist.", "A professional can help you develop strategies to build meaningful social connections." ] }
+  }
+}
